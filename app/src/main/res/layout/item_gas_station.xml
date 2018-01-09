@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.perazzo.gaslocation.ui.viewmodel.GasStationItemViewModel" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_medium"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_medium">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView_gasStation"
+                style="@style/GasStationItemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_small"
+                tools:text="Shell Station - Distance: 1900 ft"
+                android:text="@{viewModel.title}" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout_gas_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1.2"
+                android:layout_below="@+id/textView_gasStation">
+
+                <TextView
+                    android:id="@+id/textView_regPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_small"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:text="@{viewModel.regPrice}"
+                    tools:text="Regular: \n 2.950 " />
+
+                <TextView
+                    android:id="@+id/textView_midPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_small"
+                    android:text="@{viewModel.midPrice}"
+                    tools:text="Medium: \n 2.950 " />
+
+                <TextView
+                    android:id="@+id/textView_supPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_small"
+                    android:text="@{viewModel.prePrice}"
+                    tools:text="Supreme: \n 2.950 " />
+
+                <TextView
+                    android:id="@+id/textView_dieselPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.3"
+                    android:gravity="center"
+                    android:padding="@dimen/spacing_small"
+                    android:text="@{viewModel.dieselPrice}"
+                    tools:text="Diesel: \n 2.950 "/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_address_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_large"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/linearLayout_gas_container"
+                android:text="@string/copy.address_title"/>
+
+            <TextView
+                android:id="@+id/textView_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/textView_address_title"
+                android:layout_marginTop="@dimen/spacing_medium"
+                android:layout_below="@+id/linearLayout_gas_container"
+                android:text="@{viewModel.address}"
+                tools:text="Burlington Ave. Fairfield. "/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="@dimen/button_size"
+                android:layout_height="@dimen/button_size"
+                android:elevation="@dimen/spacing_empty"
+                android:scaleType="center"
+                android:src="@drawable/ic_directions_white_24dp"
+                android:layout_below="@+id/linearLayout_gas_container"
+                android:layout_marginEnd="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>
+

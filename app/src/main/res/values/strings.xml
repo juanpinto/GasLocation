@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Gas Location</string>
+    <string name="acopy.gas_stations">Gas Stations</string>
+    <string name="location_permission">We need to get your location</string>
+    <string name="location_permission_dialog">We need to get your location to get the gas stations near to you.</string>
+    <string name="location_permission_rejected">Please grant location permission to continue</string>
+    <string name="yes">Yes</string>
+    <string name="ok">Ok</string>
+    <string name="no">No</string>
+
+
+
+
+    <string name="copy.regular_price">Regular</string>
+    <string name="copy.medium_price">Plus</string>
+    <string name="copy.supreme_price">Premium</string>
+    <string name="copy.diesel_price">Diesel</string>
+    <string name="copy.distance">Distance: </string>
+    <string name="copy.address_title">Address:&#160;&#160;</string>
+    <string name="copy.gas_station_title">%1$s - %2$s</string>
+    <string name="copy.address">%1$s.\n%2$s.</string>
+</resources>
